@@ -1,0 +1,710 @@
+/*
+* === BODY ===
+*/
+
+
+body{
+  font-family: 'Raleway', sans-serif;
+  color: #121b26;
+  background-color: #eofbfc;
+  max-width:1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #2a3e59;
+  text-decoration: none;
+  font-style: oblique;
+}
+
+h1 {
+    display: block;
+    font-size: 25px;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+
+h2 {
+    display: block;
+    font-size: 20px;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 18px;
+    margin-top: .4em;
+    margin-bottom: .4em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h4 {
+    display: block;
+    font-size: 16px;
+    margin-top: .4em;
+    margin-bottom: .4em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+
+/*Colors
+
+@dark-blue: #121b26;
+@blue: #3d5a80;
+@light-blue: #98c1d9;
+@off-white: #eofbfc;
+@coral: #ee6c4d;
+@grey: #293241;
+*/
+
+
+/*
+* === WRAPPER ===
+*/
+
+.wrapper {
+  display:grid;
+  grid-gap: 1em;
+  grid-template:
+  "sidebar header" auto
+  "sidebar hero" auto
+  "sidebar works" auto
+  "sidebar footer" auto /1fr 4fr;
+  margin: 1em;
+}
+
+/*
+* === SIDEBAR ===
+*/
+
+
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  background-color: #121b26;
+  padding:1em;
+  color: #e0ecf3;
+  min-width: 180px;
+}
+
+
+.icon-container {
+  display: flex;
+  align-self: center;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  width:100%;
+  min-width:100px;
+  margin:1em;
+}
+
+.icon-img {
+  width: 30px;
+  height: 30px;
+  padding: .3em;
+}
+
+.bio-photo {
+  width:100%;
+}
+
+.bio-img {
+  display:block;
+  width: 100%;
+  border-radius: 25%;
+}
+
+.bio-description{
+  width:100%;
+  padding-top: 1em;
+  color: #eofbfc;
+}
+
+.bio-skills{
+  padding-top: 1em;
+  width: 100%;
+  margin-left:0;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  width:100%;
+  min-width:100px;
+  margin:0;
+  padding-top: .2em;
+  padding-bottom: .2em;
+}
+
+.skills-img {
+  width: 35px;
+  height: 35px;
+  padding:2px;
+}
+
+.cv-download{
+  padding-top: 1em;
+}
+
+.download-img {
+  width: 50px;
+  height: 50px;
+  padding: .3em;
+  cursor: pointer;
+}
+
+
+/*
+* --- header ---
+*/
+
+header {
+  grid-area: header;
+  background-color: #8a9cb2;
+  display:grid;
+  grid-gap: .25em;
+  grid-template:
+  "logo name " auto
+  "logo title" auto / 1fr 4fr;
+  border-bottom: 3px solid #ee6c4d;
+  padding:.5em;
+}
+
+.logo{
+  grid-area: logo;
+  padding: 1em;
+  width:100%;
+}
+
+.logo-graphic {
+  max-width:100px;
+}
+
+.header-title {
+  grid-area: name;
+  text-align: right;
+  justify-content: center;
+  margin-bottom: 0em;
+  margin-right: 1em;
+}
+
+.title {
+  grid-area:title;
+  text-align: right;
+  margin-right: 1em;
+}
+
+
+/*
+* --- hero ---
+*/
+
+.hero {
+  grid-area: hero;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  background-color: #708090;
+  height:auto;
+}
+
+.hero-img{
+  min-height:50%;
+  max-width:100%;
+  width:auto;
+}
+
+/*
+* --- works ---
+*/
+
+.works {
+  grid-area: works;
+  display: flex;
+  flex-direction: column;
+  background-color: #3d5a80;
+  padding: 1em;
+}
+
+h3.section-title{
+  padding: .5em;
+  padding-top: 0;
+  color: white;
+}
+
+.tiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tile {
+  padding: .5em;
+  margin: .5em;
+  width: calc(33.3% - 1em);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.tile-name{
+  color: #3d5a80;
+  font-weight: bolder;
+}
+
+.tile-img{
+  width: 100%;
+  min-width: 100px;
+  border-radius: 10px;
+  align-self: center;
+}
+
+button {
+  margin: 1.5em 1em 1em 0.25em;
+  padding: 5px;
+  border: 2px solid black;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: #ee6c4d;
+  opacity: 1;
+  font-size: 10px;
+  color: black;
+  text-decoration: none;
+  cursor:pointer;
+  }
+
+button:hover {
+  opacity: .85;
+}
+
+
+
+/*
+* --- footer ---
+*/
+
+footer {
+  grid-area: footer;
+  display:block;
+  background-color: #8a9cb2;
+  text-align: center;
+  margin: 0;
+  padding: 1em;
+}
+
+/*
+**********************************************
+MEDIA QUERIES
+**********************************************
+*/
+
+/* Nexus 5 size*/
+@media screen and (max-width: 425px) {
+
+body {
+  margin:0;
+}
+
+h1 {
+    font-size: 14px;
+}
+
+h2 {
+    font-size: 13px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+p {
+  font-size: 11px;
+}
+
+.wrapper {
+  display:flex;
+  flex-direction: column;
+  margin: 0;
+  padding:.2em;
+  min-width: 300px;
+}
+
+header {
+  order: 1;
+}
+
+h1.header-title{
+  margin: 0;
+}
+
+.sidebar {
+  order:2;
+  padding:.5em;
+  display: grid;
+  grid-gap: .1em;
+  grid-template:
+  "img about " auto
+  "img about" auto
+  "cv skills" auto / 50% 50%;
+  justify-items: end;
+  text-align: justify;
+  align-items: center;
+  margin-bottom: .5em;
+  min-width:180px;
+}
+
+.icon-container {
+  width:100%;
+  justify-content: space-between;
+  padding:0;
+  margin:0;
+}
+
+.bio-photo {
+  grid-area: "img";
+}
+.bio-img {
+  width: 90%;
+  margin: .6em;
+}
+
+.bio-description{
+  grid-area: "about";
+  width:90%;
+  text-align: right;
+  font-size: 10px;
+  color: #eofbfc;
+  margin: 0;
+  padding-right: .5em;
+  padding-top: 0;
+}
+
+.bio-skills{
+  grid-area: "skills";
+  padding-top: .5em;
+  padding-left: .5em;
+  width: 100%;
+  margin-left:.5em;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:start;
+  width:100%;
+  min-width:100px;
+  margin:0;
+}
+
+.skills-img {
+  width: 30px;
+  height: 30px;
+  padding:2px;
+}
+
+.cv-download{
+  grid-area: "cv";
+  padding-top: .5em;
+  padding-right: .5em;
+  text-align: right;
+}
+
+.download-img {
+  width: 50px;
+  height: 50px;
+  padding: .3em;
+}
+
+h3.cv-download{
+  margin: 0;
+}
+
+.hero {
+  display:none;
+}
+
+.works {
+  order:3;
+  display: flex;
+  flex-direction: column;
+}
+
+h3.section-title{
+  padding: .5em;
+  padding-top: 0;
+}
+
+.tiles {
+  display: flex;
+  flex-direction: column;
+}
+
+.tile {
+  padding: .5em;
+  margin: .5em;
+  width: calc(100% - 1em);
+}
+
+footer {
+  order:4;
+}
+}
+
+
+
+@media screen and (max-width: 570px) {
+
+  .icon-img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+}
+
+
+
+/*
+Tablet size
+*/
+
+@media screen and (min-width: 376px) and (max-width: 700px) {
+
+  body {
+    margin:0;
+  }
+
+  header, .sidebar, .works, footer {
+    padding: .5em;
+    margin: 0 .5em 0 .5em;
+    width: calc(100%-1.4em);
+  }
+
+  .wrapper {
+    display:flex;
+    flex-direction: column;
+    margin: .5em;
+    padding:.2em;
+    min-width: 300px;
+    width:100%;
+  }
+
+  header {
+    order: 1;
+  }
+
+  .sidebar {
+    order:2;
+    border-bottom: 3px solid #ee6c4d;
+    display: grid;
+    grid-gap: .1em;
+    grid-template:
+    "icons about about " auto
+    "img about about" auto
+    "img skills cv" auto / 30% 45% 25%;
+    justify-items: end;
+    text-align: justify;
+    align-items: center;
+    margin-bottom: .5em;
+  }
+
+  .icon-container {
+    grid-area: "icons";
+    grid-row: 1;
+    grid-column: 1;
+    width:100%;
+    justify-content:start;
+    padding-top:.5em;
+    margin:0;
+  }
+
+  .bio-photo {
+    grid-area: "img";
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end:4;
+  }
+
+  .bio-img {
+    width: 90%;
+    margin: .6em;
+  }
+
+  .bio-description{
+    grid-area: "about";
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width:90%;
+    text-align: right;
+    font-size: 10px;
+    color: #eofbfc;
+    margin: 0;
+    padding-right: .5em;
+    padding-top: 0;
+  }
+
+  .bio-skills{
+    grid-area: "skills";
+    grid-column: 2;
+    grid-row: 3;
+    padding-top: .5em;
+    padding-left: .5em;
+    width: 90%;
+    margin-left:.5em;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    width:100%;
+    min-width:100px;
+    margin:0;
+  }
+
+  .skills-img {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+  }
+
+  .cv-download{
+    grid-area: "cv";
+    grid-column: 3;
+    grid-row: 3;
+    padding-top: .5em;
+    padding-right: .5em;
+    text-align: right;
+  }
+
+  .download-img {
+    width: 50px;
+    height: 50px;
+    padding: .3em;
+  }
+
+  h3.cv-download{
+    margin: 0;
+  }
+
+  .hero {
+    display:none;
+  }
+
+  .works {
+    order:4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3.section-title{
+    padding: .5em;
+    padding-top: 0;
+  }
+
+  .tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tile {
+    padding: .5em;
+    margin: .5em;
+    width: calc(50% - 1em);
+  }
+
+  footer {
+    order:5;
+  }
+}
+
+
+/*
+470px - font size change
+*/
+
+
+@media screen and (min-width: 470px) {
+  body {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
+
+
+/* 800 px */
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 12px;
+  }
+
+  h1 {
+      font-size: 22px;
+  }
+
+  h2 {
+      font-size: 18px;
+  }
+
+  h3 {
+      font-size: 16px;
+  }
+
+  .skills-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .download-img {
+    width: 30px;
+    height: 30px;
+    padding: .2em;
+  }
+
+
+
+/* 1064 px - change heading size */
+
+@media screen and (min-width: 1064px) {
+
+  h1 {
+      display: block;
+      font-size: 30px;
+      margin-top: 0.3em;
+      margin-bottom: 0.3em;
+      margin-left: 0;
+      margin-right: 0;
+      font-weight: bold;
+  }
+}
+
+/* 1250 - fixed body width */
+
+@media screen and (min-width: 1250px) {
+  body{
+    width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
