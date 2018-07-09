@@ -359,8 +359,8 @@ h1.header-title{
   display: grid;
   grid-gap: .1em;
   grid-template:
+  "icons icons" auto
   "img about " auto
-  "img about" auto
   "cv skills" auto / 50% 50%;
   justify-items: end;
   text-align: justify;
@@ -370,8 +370,12 @@ h1.header-title{
 }
 
 .icon-container {
+  grid-area: "icons";
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
   width:100%;
-  justify-content: space-between;
+  justify-content: space-around;
   padding:0;
   margin:0;
 }
