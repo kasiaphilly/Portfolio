@@ -289,7 +289,7 @@ MEDIA QUERIES
   }
 
   h1 {
-      font-size: 14]5px;
+      font-size: 15px;
   }
 
   h2 {
@@ -662,7 +662,7 @@ Social Media icon size change on mobile/tablet
     height: 30px;
     padding: 0.2em;
   }
-
+}
 
 
 /* 1064 px - change heading size */
@@ -680,7 +680,8 @@ Social Media icon size change on mobile/tablet
 /* 1250 - fixed body width */
 
 @media screen and (min-width: 1250px) {
-  body{
+
+  body {
     width: 1250px;
     margin-left: auto;
     margin-right: auto;
