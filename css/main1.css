@@ -208,15 +208,13 @@ header {
 
 .hero {
   grid-area: hero;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
   margin: 0;
-  background-color: #708090;
+  background-color: #ee6c4d;
   height: auto;
 }
 
 .hero-img{
+  height: auto;
   min-height: 50%;
   max-width: 100%;
   width: auto;
@@ -291,19 +289,19 @@ MEDIA QUERIES
   }
 
   h1 {
-      font-size: 14px;
+      font-size: 14]5px;
   }
 
   h2 {
-      font-size: 13px;
+      font-size: 14px;
   }
 
   h3 {
-      font-size: 12px;
+      font-size: 13px;
   }
 
   p {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .wrapper {
@@ -371,7 +369,6 @@ MEDIA QUERIES
     grid-area: about;
     width: 90%;
     text-align: right;
-    font-size: 10px;
     margin-right: 1em;
     padding: 0 0.5em 0.5em 0.5em;
   }
@@ -445,17 +442,6 @@ MEDIA QUERIES
 
 
 
-@media screen and (max-width: 570px) {
-
-  .icon-img {
-    width: 20px;
-    height: 20px;
-    margin: 0;
-  }
-}
-
-
-
 /*
 Tablet size
 */
@@ -494,9 +480,10 @@ Tablet size
     grid-template:
     "icons about about " auto
     "img about about" auto
-    "img skills cv" auto / 30% 45% 25%;
+    "img skills cv" auto / 32% 44% 24%;
     text-align: justify;
     align-items: center;
+    padding-bottom: 1em;
   }
 
   .icon-container {
@@ -507,6 +494,7 @@ Tablet size
     padding-top: 0.5em;
     margin: 0;
   }
+
 
   .bio-photo {
     grid-area: img;
@@ -527,7 +515,6 @@ Tablet size
     grid-column-start: 2;
     grid-column-end: 4;
     text-align: right;
-    font-size: 10px;
     width: 95%;
     margin: 0;
     padding: 0 0.5em 0.5em 0.5em;
@@ -580,6 +567,8 @@ Tablet size
 
   .hero {
     order: 3;
+    height: 100%;
+    padding: 0;
     border-bottom: 3px solid #ee6c4d;
   }
 
@@ -603,6 +592,28 @@ Tablet size
 
   footer {
     order: 5;
+  }
+}
+
+
+
+/*
+Social Media icon size change on mobile/tablet
+*/
+
+@media screen and (min-width: 350px) and (max-width: 500px){
+  .icon-container >* {
+    flex: 2 2 10px;
+    margin: 10px;
+  }
+
+  .icon-container >a {
+    align-items: center;
+  }
+
+  .icon-img {
+    width: 30px;
+    height: 30px;
   }
 }
 
